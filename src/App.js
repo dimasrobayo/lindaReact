@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Aside from './components/Aside';
-import Contents from './components/Contents';
-import Footer from './components/Footer';
+import Header from './components/header/Header';
+import Aside from './components/aside/Aside';
+import Contents from './components/contents/Contents';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
