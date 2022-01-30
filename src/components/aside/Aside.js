@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Administrations from './nav/Administrations';
 import Documents from './nav/Documents';
 import Inventarys from './nav/Inventarys';
@@ -15,10 +16,10 @@ import Widgets from './nav/Widgets';
 export default function Aside(){
   return (
   <aside className="main-sidebar sidebar-dark-primary elevation-4">
-    <a href="index3.html" className="brand-link">
+    <Link to="/" className="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
       <span className="brand-text font-weight-light">Linda 3.0</span>
-    </a>
+    </Link>
     <div className="sidebar">
       <Profile />
 
@@ -27,13 +28,12 @@ export default function Aside(){
       <nav className="mt-2">
         <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li className="nav-item menu-open">
-            <a href="/#" className="nav-link active">
+            <Link to="/" className="nav-link active">
               <i className="nav-icon fas fa-tachometer-alt" />
               <p>
                 Tablero
-                <i className="right fas fa-angle-left" />
               </p>
-            </a>
+            </Link>
           </li>
           {/* SESSION WIDGETS */}
           <Widgets />
