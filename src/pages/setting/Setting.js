@@ -1,27 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Title from '../../components/title/Title';
 import './setting.css';
 
 export default function Setting() {
   return (
     <div className="content-wrapper">
       <div className="content-header">
-          <div className="container-fluid">
-              <div className="row mb-2">
-                  <div className="col-sm-6">
-                      <h1 className="m-0">CONFIGURACIONES DEL SISTEMA</h1>
-                  </div>
-                  <div className="col-sm-6">
-                      <ol className="breadcrumb float-sm-right">
-                          <li className="breadcrumb-item">
-                            <Link to="/">Home </Link>
-                            / Configuraciones del sistema
-                          </li>
-                          <li className="breadcrumb-item active">Tablero v3</li>
-                      </ol>
-                  </div>
-              </div>
-          </div>
+        <Title
+          title='CONFIGURACIONES DEL SISTEMA'
+          route='Home '
+          position='/ Configuraciones del sistema'
+        />
       </div>
       <section className="content">
         <div className="container-fluid">
