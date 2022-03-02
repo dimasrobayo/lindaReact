@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Title(props) {
-    const { title, route, position } = props
+    const { title, component, position, path } = props
 
     return (
         <div className="container-fluid">
@@ -13,7 +13,7 @@ export default function Title(props) {
                 <div className="col-sm-6">
                     <ol className="breadcrumb float-sm-right">
                         <li className="breadcrumb-item">
-                            <Link to="/">{route}</Link>{position}
+                            <Link to={path}>{component}</Link>{position}
                         </li>
                         <li className="breadcrumb-item active">Tablero v3</li>
                     </ol>

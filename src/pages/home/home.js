@@ -11,8 +11,9 @@ export default function home() {
       <div className="content-header">
         <Title
             title='TABLERO'
-            route='Home '
+            component='Home'
             position=''
+            path='/'
         />
       </div>
       <div className="content">

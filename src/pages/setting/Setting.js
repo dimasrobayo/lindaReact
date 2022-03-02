@@ -9,8 +9,9 @@ export default function Setting() {
       <div className="content-header">
         <Title
           title='CONFIGURACIONES DEL SISTEMA'
-          route='Home '
+          component='Home'
           position='/ Configuraciones del sistema'
+          path='/'
         />
       </div>
       <section className="content">
@@ -21,9 +22,9 @@ export default function Setting() {
                 <div className="card-header">
                   <h3 className="card-title">Empresas Registradas</h3>
                   <div className="btn-group option-general">
-                    <button type="button" className="btn btn-success">
+                    <Link type="button" className="btn btn-success" to="/addsetting">
                       <i className="fas fa-plus"></i>
-                    </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="card-body">
@@ -53,7 +54,7 @@ export default function Setting() {
                             </button>
                             <div className="dropdown-menu" role="menu">
                               <Link className="dropdown-item" to="/">
-                              <i className="fas fa-eye"> Ver</i>
+                                <i className="fas fa-eye"> Ver</i>
                               </Link>
                               <Link className="dropdown-item" to="/">
                                 <i className="fas fa-pencil-alt"> Editar</i>
@@ -93,15 +94,6 @@ export default function Setting() {
                         </td>
                       </tr>
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>NOMBRE DE LA EMPRESA</th>
-                        <th>ADMINISTRADOR</th>
-                        <th>TEL&Eacute;FONO</th>
-                        <th>EMAIL</th>
-                        <th>ACCIONES</th>
-                      </tr>
-                    </tfoot>
                   </table>
                 </div>
               </div>
