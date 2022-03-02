@@ -22,13 +22,13 @@ export default function AddSetting() {
                 <div className="card-header">
                   <h3 className="card-title">Empresas Registradas</h3>
                   <div className="btn-group option-general">
-                    <Link type="button" className="btn btn-success" to="/addsetting">
-                      <i className="fas fa-plus"></i>
+                    <Link type="button" className="btn btn-success" to="/setting">
+                      <i className="fas fa-window-close"></i>
                     </Link>
                   </div>
                 </div>
                 <div className="card-body">
-                  <h1>nuefo formulario</h1>
+                  <h1>nuevo formulario</h1>
                 </div>
               </div>
             </div>

@@ -15,10 +15,10 @@ import Widgets from './nav/Widgets';
 
 export default function Aside(){
   return (
-  <aside className="main-sidebar sidebar-dark-primary elevation-4">
+  <aside className="main-sidebar sidebar-master-primary elevation-4">
     <Link to="/" className="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
-      <span className="brand-text font-weight-light">Linda 3.0</span>
+      <img src="dist/img/logo_masterclass.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
+      <span className="brand-text font-weight-light">MasterClass 3.0</span>
     </Link>
     <div className="sidebar">
       <Profile />

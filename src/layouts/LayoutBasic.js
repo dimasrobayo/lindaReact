@@ -7,7 +7,7 @@ export default function LayoutBasic(props) {
     const {children} = props;
 
     return (
-        <div class="wrapper">
+        <div className="wrapper">
             <Header />
             <Aside />
             <>

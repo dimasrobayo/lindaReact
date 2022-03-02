@@ -9,7 +9,7 @@ export default function Setting() {
       <div className="content-header">
         <Title
           title='CONFIGURACIONES DEL SISTEMA'
-          component='Home'
+          component='Home '
           position='/ Configuraciones del sistema'
           path='/'
         />

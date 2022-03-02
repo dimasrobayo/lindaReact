@@ -11,7 +11,7 @@ export default function home() {
       <div className="content-header">
         <Title
             title='TABLERO'
-            component='Home'
+            component='Home '
             position=''
             path='/'
         />
