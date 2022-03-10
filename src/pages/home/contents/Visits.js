@@ -1,4 +1,48 @@
 import React from 'react';
+import { 
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Tooltip,
+    Legend
+} from 'chart.js';
+import { Line} from 'react-chartjs-2';
+import { UserData } from '../data/Data';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Tooltip,
+    Legend
+);
+
+export const options = {
+    responsive: true,
+    plugins: {
+        legend: {
+        position: 'top',
+        }
+    },
+};
+
+const Data = {
+    labels: UserData.map((data) => data.year),
+    datasets: [{
+        label: "Users Gained",
+        data: UserData.map((data) => data.userGain),
+        backgroundColor: '#007bff',
+    },
+    {
+        label: "Users Lost",
+        data: UserData.map((data) => data.userLost),
+        backgroundColor: '#6c757d',
+    }
+]
+}
 
 export default function Visits() {
     return( 
@@ -26,15 +70,7 @@ export default function Visits() {
 
             {/* /.d-flex */}
             <div className="position-relative mb-4">
-                <canvas id="visitors-chart" height={200} />
-            </div>
-            <div className="d-flex flex-row justify-content-end">
-                <span className="mr-2">
-                    <i className="fas fa-square text-primary" /> Esta Semana
-                </span>
-                <span>
-                    <i className="fas fa-square text-gray" /> Semana Pasada
-                </span>
+                <Line options={options} data={Data} height="80px" />
             </div>
         </div>
     </div>);

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Title from '../../../components/title/Title';
+import FormSetting from './FormSetting';
 import './addsetting.css';
 
 export default function AddSetting() {
@@ -18,18 +19,16 @@ export default function AddSetting() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-12">
-              <div className="card">
+              <div className="card card-success">
                 <div className="card-header">
-                  <h3 className="card-title">Empresas Registradas</h3>
+                  <h3 className="card-title">REGISTRO DE EMPRESA</h3>
                   <div className="btn-group option-general">
-                    <Link type="button" className="btn btn-success" to="/setting">
+                    <Link type="button" className="btn btn-secondary" to="/setting">
                       <i className="fas fa-window-close"></i>
                     </Link>
                   </div>
                 </div>
-                <div className="card-body">
-                  <h1>nuevo formulario</h1>
-                </div>
+                <FormSetting />
               </div>
             </div>
           </div>

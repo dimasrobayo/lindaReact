@@ -1,4 +1,50 @@
 import React from 'react';
+import { 
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Tooltip,
+    Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+import { UserData } from '../data/Data';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Tooltip,
+    Legend
+);
+
+export const options = {
+    responsive: true,
+    plugins: {
+        legend: {
+        position: 'top',
+        }
+    },
+};
+
+const labels = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+    
+const Data = {
+    labels,
+    datasets: [
+            {
+            label: "Este Año",
+            data: UserData.map((data) => data.userGain),
+            backgroundColor: '#007bff',
+
+        },
+        {
+            label: "Año Pasado",
+            data: UserData.map((data) => data.userLost),
+            backgroundColor: '#6c757d',
+        }
+    ]
+}
 
 export default function SalesStatistics() {
   return (
@@ -26,15 +72,7 @@ export default function SalesStatistics() {
             </div>
             
             <div className="position-relative mb-4">
-                <canvas id="sales-chart" height={200} />
-            </div>
-            <div className="d-flex flex-row justify-content-end">
-                <span className="mr-2">
-                    <i className="fas fa-square text-primary" /> This year
-                </span>
-                <span>
-                    <i className="fas fa-square text-gray" /> Last year
-                </span>
+                <Bar options={options} data={Data} height="80px" />
             </div>
         </div>
   </div>);
