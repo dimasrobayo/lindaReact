@@ -1,15 +1,25 @@
 //layouts
 import LayoutBasic from '../layouts/LayoutBasic';
+import LayoutClient from '../layouts/LayoutClient';
 
-//pages
-import Home from '../pages/home';
-import Setting from '../pages/setting';
-import AddSetting from '../pages/setting/addsetting';
+//pages client
+import HomeClient from '../pages/client/HomeClient';
+
+//pages dashboard
+import Home from '../pages/dashboard/home';
+import Setting from '../pages/dashboard/setting';
+import AddSetting from '../pages/dashboard/setting/addsetting';
 import Error404 from '../pages/error404';
 
 const routes = [
     {
         path: "/",
+        layout: LayoutClient,
+        component: HomeClient,
+        exact: true,
+    },
+    {
+        path: "/dashboard",
         layout: LayoutBasic,
         component: Home,
         exact: true,
