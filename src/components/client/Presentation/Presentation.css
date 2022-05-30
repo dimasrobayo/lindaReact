@@ -1,0 +1,7 @@
+p {
+    color: #000 !important;
+}
+
+.set-bg {
+    background-image: url("../../../assets/hero/banner.jpg") !important;
+}
