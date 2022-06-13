@@ -1,39 +1,42 @@
-import React from 'react'
+import React from 'react';
+import {map} from 'lodash';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.min.css';
+import 'owl.carousel/dist/assets/owl.theme.default.min.css';
+import './Carousel.css';
+import { useSelector } from 'react-redux';
+import articles from '../../../assets/storage/products/articles.jpg';
 
 export default function Carousel() {
-  return (
-    <section className="categories">
-        <div className="container">
-            <div className="row">
-                <div className="categories__slider owl-carousel">
-                    <div className="col-lg-3">
-                        <div className="categories__item set-bg" data-setbg="img/categories/cat-1.jpg">
-                            <h5><a href="/">Fresh Fruit</a></h5>
+    const productsList = useSelector((state) => state.articlesList.articles);
+    const { products } = productsList;
+    
+    return (
+        <section className="categories">
+            <div className="container">
+                <div className="row">
+                    <OwlCarousel
+                        className="owl-theme"
+                        items="6"
+                        autoplay
+                        loop
+                        margin={20}
+                    >
+                        {map(products, (product, index) => (
+                        <div className="item" key={index}>
+                            <div 
+                                className="categories__item cardProduct"
+                            >
+                                <img src={articles} height="100%" />
+                                <h5>
+                                    <a href="/">{product.productName.slice(1,10)}</a>
+                                </h5>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-lg-3">
-                        <div className="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">
-                            <h5><a href="/">Dried Fruit</a></h5>
-                        </div>
-                    </div>
-                    <div className="col-lg-3">
-                        <div className="categories__item set-bg" data-setbg="img/categories/cat-3.jpg">
-                            <h5><a href="/">Vegetables</a></h5>
-                        </div>
-                    </div>
-                    <div className="col-lg-3">
-                        <div className="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
-                            <h5><a href="/">drink fruits</a></h5>
-                        </div>
-                    </div>
-                    <div className="col-lg-3">
-                        <div className="categories__item set-bg" data-setbg="img/categories/cat-5.jpg">
-                            <h5><a href="/">drink fruits</a></h5>
-                        </div>
-                    </div>
+                        ))}
+                    </OwlCarousel>
                 </div>
             </div>
-        </div>
-    </section>
-  )
+        </section>
+    )
 }

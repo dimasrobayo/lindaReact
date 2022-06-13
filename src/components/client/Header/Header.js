@@ -1,5 +1,7 @@
 import React from 'react';
 import language from '../../../assets/language.png';
+import './Header.css';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -18,24 +20,24 @@ export default function Header() {
                     <div className="col-lg-6 col-md-6">
                         <div className="header__top__right">
                             <div className="header__top__right__social">
-                                <a href="/"><i className="fa fa-facebook"></i></a>
-                                <a href="/"><i className="fa fa-twitter"></i></a>
-                                <a href="/"><i className="fa fa-linkedin"></i></a>
-                                <a href="/"><i className="fa fa-pinterest-p"></i></a>
+                                <Link to="/"><i className="fa fa-facebook"></i></Link>
+                                <Link to="/"><i className="fa fa-twitter"></i></Link>
+                                <Link to="/"><i className="fa fa-linkedin"></i></Link>
+                                <Link to="/"><i className="fa fa-pinterest-p"></i></Link>
                             </div>
                             <div className="header__top__right__language">
                                 <img src={language} alt="" />
                                 <div>Español</div>
                                 <span className="arrow_carrot-down"></span>
                                 <ul>
-                                    <li><a href="/">Español</a></li>
-                                    <li><a href="/">English</a></li>
+                                    <li><Link to="/">Español</Link></li>
+                                    <li><Link to="/">English</Link></li>
                                 </ul>
                             </div>
                             <div className="header__top__right__auth">
-                                <a href="/dashboard">
+                                <Link to="/dashboard">
                                     <i className="fa fa-user"></i> Login
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -47,30 +49,45 @@ export default function Header() {
             <div className="row">
                 <div className="col-lg-3">
                     <div className="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt="" /></a>
+                        <Link to="./index.html">
+                            <img src="img/logo.png" alt="" />
+                        </Link>
                     </div>
                 </div>
                 <div className="col-lg-6">
                     <nav className="header__menu">
                         <ul>
-                            <li className="active"><a href="./index.html">INICIO</a></li>
-                            <li><a href="/">TIENDA</a></li>
-                            <li><a href="/">MIS COMPRAS</a>
+                            <li>
+                                <Link to="/">INICIO</Link>
+                            </li>
+                            <li>
+                                <Link to="/store">TIENDA</Link>
+                            </li>
+                            <li>
+                                <Link>MIS COMPRAS</Link>
                                 <ul className="header__menu__dropdown">
-                                    <li><a href="/">Detalle Compra</a></li>
-                                    <li><a href="/">Carro de compra</a></li>
-                                    <li><a href="/">Verificar</a></li>
+                                    <li><Link to="/">Detalle Compra</Link></li>
+                                    <li><Link to="/">Carro de compra</Link></li>
+                                    <li><Link to="/">Verificar</Link></li>
                                 </ul>
                             </li>
-                            <li><a href="./">CONTACTANOS</a></li>
+                            <li><Link to="/contact">CONTACTANOS</Link></li>
                         </ul>
                     </nav>
                 </div>
                 <div className="col-lg-3">
                     <div className="header__cart">
                         <ul>
-                            <li><a href="/"><i className="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="/"><i className="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li>
+                                <Link to="/">
+                                    <i className="fa fa-heart"></i> <span>1</span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/">
+                                    <i className="fa fa-shopping-bag"></i> <span>3</span>
+                                </Link>
+                            </li>
                         </ul>
                         <div className="header__cart__price">Articulo: <span>$150.000</span></div>
                     </div>

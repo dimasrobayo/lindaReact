@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
+import Store from './Store/Store';
+import { Provider } from 'react-redux';
 import Navigation from './routes/Navigation';
 
-function App() {
+export default function App() {
   return (
-    <Navigation />
+    <Provider store={Store}>
+      <Navigation />
+    </Provider>
   );
 }
-
-export default App;

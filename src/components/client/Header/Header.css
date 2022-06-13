@@ -1,0 +1,7 @@
+.header__menu ul li.active a {
+    color: #5a499a !important;
+}
+
+.header__menu ul li:hover > a {
+    color: #5a499a !important;
+}

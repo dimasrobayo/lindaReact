@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Asside.css';
 
 export default function Asside() {
   return (

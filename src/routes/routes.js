@@ -4,6 +4,8 @@ import LayoutClient from '../layouts/LayoutClient';
 
 //pages client
 import HomeClient from '../pages/client/HomeClient';
+import StoreClient from '../pages/client/StoreClient';
+import Contact from '../pages/client/Contact';
 
 //pages dashboard
 import Home from '../pages/dashboard/home';
@@ -16,6 +18,18 @@ const routes = [
         path: "/",
         layout: LayoutClient,
         component: HomeClient,
+        exact: true,
+    },
+    {
+        path: "/store",
+        layout: LayoutClient,
+        component: StoreClient,
+        exact: true,
+    },
+    {
+        path: "/contact",
+        layout: LayoutClient,
+        component: Contact,
         exact: true,
     },
     {

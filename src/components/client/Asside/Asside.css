@@ -1,0 +1,4 @@
+.hero.hero-normal .hero__categories ul {
+    display: none;
+    position: absolute !important;
+}

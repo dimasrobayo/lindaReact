@@ -3,7 +3,8 @@ import Asside from '../Asside';
 import Search from '../Search';
 import Presentation from '../Presentation';
 
-export default function Banner() {
+export default function 
+Banner() {
   return (
     <section className="hero">
         <div className="container">
