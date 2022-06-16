@@ -15,10 +15,12 @@ export default function Search() {
         </div>
         <div className="hero__search__phone">
             <div className="hero__search__phone__icon">
-                <i className="fa fa-phone"></i>
+                <a className="hero__search__phone" href="tel:+56 9 56594791">
+                    <i className="fa fa-phone"></i>
+                </a>
             </div>
             <div className="hero__search__phone__text">
-                <h5>+56-9 56-594791</h5>
+                <h5>+56 9 56594791</h5>
                 <span>suporte 24/7</span>
             </div>
         </div>

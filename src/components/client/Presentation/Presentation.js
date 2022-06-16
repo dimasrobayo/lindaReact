@@ -8,7 +8,7 @@ export default function Presentation() {
             <span>Ético y Sustentable</span>
             <h2>Productos <br />100% Éticos</h2>
             <p>La red emprendedores mas grandes de CHILE.</p>
-            <a href="/" className="primary-btn">SHOP NOW</a>
+            <a className="primary-btn">COMPRAR AHORA</a>
         </div>
     </div>
   )

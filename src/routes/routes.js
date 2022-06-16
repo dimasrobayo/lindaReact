@@ -6,6 +6,9 @@ import LayoutClient from '../layouts/LayoutClient';
 import HomeClient from '../pages/client/HomeClient';
 import StoreClient from '../pages/client/StoreClient';
 import Contact from '../pages/client/Contact';
+import ProductDetail from '../pages/client/ProductDetail';
+import ShopingCart from '../pages/client/ShopingCart';
+import Checkout from '../pages/client/Checkout';
 
 //pages dashboard
 import Home from '../pages/dashboard/home';
@@ -30,6 +33,24 @@ const routes = [
         path: "/contact",
         layout: LayoutClient,
         component: Contact,
+        exact: true,
+    },
+    {
+        path: "/ProductDetail",
+        layout: LayoutClient,
+        component: ProductDetail,
+        exact: true,
+    },
+    {
+        path: "/ShopingCart",
+        layout: LayoutClient,
+        component: ShopingCart,
+        exact: true,
+    },
+    {
+        path: "/Checkout",
+        layout: LayoutClient,
+        component: Checkout,
         exact: true,
     },
     {

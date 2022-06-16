@@ -11,13 +11,13 @@ import Search from './nav/Search';
 import Settings from './nav/Settings';
 import Shopping from './nav/Shopping';
 import Stadistics from './nav/Stadistics';
-import Widgets from './nav/Widgets';
+import favicon from '../../../assets/favicon.png'
 
 export default function Aside(){
   return (
   <aside className="main-sidebar sidebar-master-primary elevation-4">
     <Link to="/" className="brand-link">
-      <img src="dist/img/logo_masterclass.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
+      <img src={favicon} alt="AdminLTE" className="brand-image img-circle elevation-3" />
       <span className="brand-text font-weight-light logoDash">&Eacute;tico y Sustentable</span>
     </Link>
     <div className="sidebar">
@@ -35,8 +35,6 @@ export default function Aside(){
               </p>
             </Link>
           </li>
-          {/* SESSION WIDGETS */}
-          <Widgets />
           {/* SESSION SETTINGS */}
           <Settings />
           {/* SESSION STADISTICS */}

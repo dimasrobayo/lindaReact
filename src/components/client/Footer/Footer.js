@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
                 <div className="col-lg-3 col-md-6 col-sm-6">
                     <div className="footer__about">
                         <div className="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt="" /></a>
+                            <Link to="/"><img src="img/logo.png" alt="" /></Link>
                         </div>
                         <ul>
                             <li>Dirección: Alvaréz de Toledo 764</li>
@@ -21,20 +22,20 @@ export default function Footer() {
                     <div className="footer__widget">
                         <h6>Enlaces útiles</h6>
                         <ul>
-                            <li><a href="/">About Us</a></li>
-                            <li><a href="/">About Our Shop</a></li>
-                            <li><a href="/">Secure Shopping</a></li>
-                            <li><a href="/">Delivery infomation</a></li>
-                            <li><a href="/">Privacy Policy</a></li>
-                            <li><a href="/">Our Sitemap</a></li>
+                            <li><a href="/">Sobre nosotros</a></li>
+                            <li><a href="/">Acerca de nuestra tienda</a></li>
+                            <li><a href="/">Compras seguras</a></li>
+                            <li><a href="/">Información de entrega</a></li>
+                            <li><a href="/">Política de privacidad</a></li>
+                            <li><a href="/">Nuestro mapa del sitio</a></li>
                         </ul>
                         <ul>
-                            <li><a href="/">Who We Are</a></li>
-                            <li><a href="/">Our Services</a></li>
-                            <li><a href="/">Projects</a></li>
-                            <li><a href="/">Contact</a></li>
-                            <li><a href="/">Innovation</a></li>
-                            <li><a href="/">Testimonials</a></li>
+                            <li><a href="/">Quienes somos</a></li>
+                            <li><a href="/">Nuestros servicios</a></li>
+                            <li><a href="/">Proyectos</a></li>
+                            <li><a href="/">Contacto</a></li>
+                            <li><a href="/">Innovación</a></li>
+                            <li><a href="/">Testimonios</a></li>
                         </ul>
                     </div>
                 </div>

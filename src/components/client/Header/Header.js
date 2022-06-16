@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
-    <header className="header">
+    <div className="header">
         <div className="header__top">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-6">
                         <div className="header__top__left">
                             <ul>
-                                <li><i className="fa fa-envelope"></i> soporte@eticoysustentable.cl</li>
+                                <li>
+                                    <i className="fa fa-envelope"></i> soporte@eticoysustentable.cl
+                                </li>
                                 <li>Todos los envio gratis para este cyber day.</li>
                             </ul>
                         </div>
@@ -49,7 +51,7 @@ export default function Header() {
             <div className="row">
                 <div className="col-lg-3">
                     <div className="header__logo">
-                        <Link to="./index.html">
+                        <Link to="/">
                             <img src="img/logo.png" alt="" />
                         </Link>
                     </div>
@@ -64,11 +66,11 @@ export default function Header() {
                                 <Link to="/store">TIENDA</Link>
                             </li>
                             <li>
-                                <Link>MIS COMPRAS</Link>
+                                <a>MIS COMPRAS</a>
                                 <ul className="header__menu__dropdown">
-                                    <li><Link to="/">Detalle Compra</Link></li>
-                                    <li><Link to="/">Carro de compra</Link></li>
-                                    <li><Link to="/">Verificar</Link></li>
+                                    <li><Link to="/ProductDetail">Detalle Compra</Link></li>
+                                    <li><Link to="/ShopingCart">Carro de compra</Link></li>
+                                    <li><Link to="/Checkout">Checkout</Link></li>
                                 </ul>
                             </li>
                             <li><Link to="/contact">CONTACTANOS</Link></li>
@@ -79,12 +81,7 @@ export default function Header() {
                     <div className="header__cart">
                         <ul>
                             <li>
-                                <Link to="/">
-                                    <i className="fa fa-heart"></i> <span>1</span>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/">
+                                <Link to="/ShopingCart">
                                     <i className="fa fa-shopping-bag"></i> <span>3</span>
                                 </Link>
                             </li>
@@ -97,6 +94,6 @@ export default function Header() {
                 <i className="fa fa-bars"></i>
             </div>
         </div>
-    </header>
+    </div>
     )
 }
